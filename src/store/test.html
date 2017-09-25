@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+
+    $.ajax({
+      url: './static/json/bbb.json',
+      dataType: 'jsonp',
+      header: 'Access-Control-Allow',
+      jsonpCallback: 'callback',
+      success: function (d) {
+        alert(JSON.stringify(d))// 远程json数据放在query.results下
+      }
+    })
+  </script>
+</head>
+<body>
+
+</body>
+</html>
